@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fanpage FPT Underground - PTCD HCM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .glowing-background {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 200% 200%;
+      animation: glowing 5s ease infinite;
+    }
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .fb-page {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="glowing-background text-white py-4 text-2xl font-bold">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-4">
+        <img src="Logo-PTCD-Đã tách nền (1).png" alt="Logo FPT" class="h-12">
+        <h1 class="text-xl sm:text-2xl font-bold">Trường THPT Của Tôi</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nội dung chính -->
+  <main class="container mx-auto p-6 text-center">
+    <h2 class="text-3xl font-semibold text-orange-600 mb-4">Theo dõi Fanpage chính thức</h2>
+    <p class="text-gray-700 mb-6 max-w-xl mx-auto">
+      Hãy theo dõi Fanpage <strong>FPT Underground - PTCD HCM</strong> để cập nhật những hoạt động mới nhất,
+      sự kiện học sinh, tin tức nhà trường và nhiều nội dung hấp dẫn khác!
+    </p>
+
+    <!-- Facebook Page Plugin -->
+    <div id="fb-root"></div>
+    <div class="fb-page" 
+         data-href="https://www.facebook.com/fpshcmunderground.ptcdhcm" 
+         data-tabs="timeline" 
+         data-width="" 
+         data-height="" 
+         data-small-header="false" 
+         data-adapt-container-width="true" 
+         data-hide-cover="false" 
+         data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/fpshcmunderground.ptcdhcm" 
+                  class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/fpshcmunderground.ptcdhcm">FPT Underground - PTCD HCM</a>
+      </blockquote>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glowing-background text-white text-center py-4 mt-10">
+    &copy; 2025 Trường THPT Của Tôi. All rights reserved.
+  </footer>
+
+  <!-- Facebook SDK -->
+  <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0"
+          nonce="FBSDK123">
+  </script>
+</body>
+</html>

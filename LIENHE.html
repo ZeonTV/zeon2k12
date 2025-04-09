@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - Trường Đại học FPT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .glowing-background {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 200% 200%;
+      animation: glowing 5s ease infinite;
+    }
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 153, 0);
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .group:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+    }
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: underline;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Header Đồng Bộ -->
+  <header class="glowing-background text-white py-4 text-2xl font-bold relative">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-4">
+        <img src="Logo-PTCD-Đã tách nền (1).png" alt="Logo FPT" class="h-12">
+        <h1 class="text-xl sm:text-2xl font-bold">Trường THPT Của Tôi</h1>
+      </div>
+      <nav class="flex space-x-4 relative items-center">
+        <a href="http://127.0.0.1:3000/ASM/testASM.html" class="hover:bg-gray-200 px-4 py-2 rounded transition duration-300">Trang chủ</a>
+        <div class="relative group">
+          <a href="#" class="hover:bg-orange-300 px-4 py-2 rounded inline-block transition duration-300">Giới thiệu</a>
+          <div class="dropdown-content">
+            <a href="SDTC.html">Sơ đồ tổ chức</a>
+            <a href="fanpage.html">Fanpage</a>
+          </div>
+        </div>
+        <a href="LIENHE.html" class="hover:bg-gray-200 px-4 py-2 rounded transition duration-300">Liên hệ</a>
+        <a href="GOPY.html" class="hover:bg-gray-200 px-4 py-2 rounded transition duration-300">Góp ý</a>
+        <a href="HOIDAP.html" class="hover:bg-gray-200 px-4 py-2 rounded transition duration-300">Hỏi & Đáp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Nội dung Liên hệ -->
+  <main class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">Liên hệ Trường Đại học FPT</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hà Nội</h3>
+        <p>Khu Giáo dục và Đào tạo – Khu Công nghệ cao Hòa Lạc – Km29 Đại lộ Thăng Long, H. Thạch Thất, TP. Hà Nội</p>
+        <p>Điện thoại: (024) 7300 5588</p>
+        <p>Email: <a href="mailto:tuyensinh.hanoi@fpt.edu.vn" class="text-blue-600">tuyensinh.hanoi@fpt.edu.vn</a></p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">TP. Hồ Chí Minh</h3>
+        <p>Lô E2a-7, Đường D1 Khu Công nghệ cao, P. Long Thạnh Mỹ, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+        <p>Điện thoại: (028) 7300 5588</p>
+        <p>Email: <a href="mailto:daihoc.hcm@fpt.edu.vn" class="text-blue-600">daihoc.hcm@fpt.edu.vn</a></p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Đà Nẵng</h3>
+        <p>Khu đô thị công nghệ FPT Đà Nẵng, P. Hoà Hải, Q. Ngũ Hành Sơn, TP. Đà Nẵng</p>
+        <p>Điện thoại: (0236) 730 0999</p>
+        <p>Email: <a href="mailto:dnuni@fe.edu.vn" class="text-blue-600">dnuni@fe.edu.vn</a></p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cần Thơ</h3>
+        <p>Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần Thơ</p>
+        <p>Điện thoại: (0292) 730 3636</p>
+        <p>Email: <a href="mailto:fptu.cantho@fe.edu.vn" class="text-blue-600">fptu.cantho@fe.edu.vn</a></p>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Quy Nhơn</h3>
+        <p>Khu đô thị mới An Phú Thịnh, Phường Nhơn Bình & Phường Đống Đa, TP. Quy Nhơn, Bình Định</p>
+        <p>Điện thoại: (0256) 7300 999</p>
+        <p>Email: <a href="mailto:qnuni@fe.edu.vn" class="text-blue-600">qnuni@fe.edu.vn</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glowing-background text-white text-center py-4 mt-10">
+    &copy; 2025 Trường Đại học FPT. All rights reserved.
+  </footer>
+</body>
+</html>

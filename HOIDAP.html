@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hỏi & Đáp - Trường THPT Của Tôi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .glowing-background {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 200% 200%;
+      animation: glowing 5s ease infinite;
+    }
+
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .group:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 153, 0);
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: underline;
+    }
+
+    .accordion-button::after {
+      content: '+';
+      float: right;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-button.active::after {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="glowing-background text-white py-4 text-2xl font-bold relative">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-4">
+        <img src="Logo-PTCD-Đã tách nền (1).png" alt="Logo FPT" class="h-12">
+        <h1 class="text-xl sm:text-2xl font-bold">Trường THPT Của Tôi</h1>
+      </div>
+
+      <nav class="flex space-x-4 relative items-center">
+        <a href="http://127.0.0.1:3000/ASM/testASM.html" class="hover:bg-gray-200 px-4 py-2 rounded">Trang chủ</a>
+
+        <div class="relative group">
+          <a href="#" class="hover:bg-orange-300 px-4 py-2 rounded inline-block">Giới thiệu</a>
+          <div class="dropdown-content">
+            <a href="SDTC.html">Sơ đồ tổ chức</a>
+            <a href="https://www.facebook.com/fpshcmunderground.ptcdhcm?locale=vi_VN" target="_blank">Fanpage</a>
+          </div>
+        </div>
+
+        <a href="LIENHE.html" class="hover:bg-gray-200 px-4 py-2 rounded">Liên hệ</a>
+        <a href="GOPY.html" class="hover:bg-gray-200 px-4 py-2 rounded">Góp ý</a>
+        <a href="HOIDAP.html" class="bg-white text-orange-600 font-bold px-4 py-2 rounded shadow">Hỏi & Đáp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Nội dung Hỏi & Đáp -->
+  <main class="max-w-3xl mx-auto p-6 mt-8 bg-white rounded-lg shadow">
+    <h2 class="text-2xl font-bold text-orange-600 mb-6 text-center">Hỏi & Đáp</h2>
+
+    <!-- Câu hỏi 1 -->
+    <div class="mb-4 border rounded">
+      <button class="accordion-button w-full text-left px-4 py-3 font-semibold text-gray-700 focus:outline-none">
+        Làm sao để đăng ký tài khoản?
+      </button>
+      <div class="accordion-content px-4 py-2 text-gray-600 hidden">
+        Bạn có thể đăng ký tài khoản bằng cách nhấn vào nút "Đăng ký" ở trang chủ và điền đầy đủ thông tin yêu cầu.
+      </div>
+    </div>
+
+    <!-- Câu hỏi 2 -->
+    <div class="mb-4 border rounded">
+      <button class="accordion-button w-full text-left px-4 py-3 font-semibold text-gray-700 focus:outline-none">
+        Tôi quên mật khẩu thì phải làm sao?
+      </button>
+      <div class="accordion-content px-4 py-2 text-gray-600 hidden">
+        Hãy bấm vào "Quên mật khẩu" trên màn hình đăng nhập để đặt lại mật khẩu qua email của bạn.
+      </div>
+    </div>
+
+    <!-- Câu hỏi 3 -->
+    <div class="mb-4 border rounded">
+      <button class="accordion-button w-full text-left px-4 py-3 font-semibold text-gray-700 focus:outline-none">
+        Làm sao để liên hệ với nhà trường?
+      </button>
+      <div class="accordion-content px-4 py-2 text-gray-600 hidden">
+        Bạn có thể liên hệ qua mục "Liên hệ" trên website hoặc gửi email đến địa chỉ hỗ trợ của trường.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glowing-background text-white text-center py-4 mt-10 relative">
+    &copy; 2025 Trường THPT Của Tôi. All rights reserved.
+  </footer>
+
+  <!-- Script Accordion -->
+  <script>
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isOpen = !content.classList.contains('hidden');
+
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.accordion-button').forEach(b => b.classList.remove('active'));
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          button.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

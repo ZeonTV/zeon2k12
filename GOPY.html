@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Góp ý - Trường THPT Của Tôi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    .glowing-background {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 200% 200%;
+      animation: glowing 5s ease infinite;
+    }
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="glowing-background text-white py-4 text-2xl font-bold">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-4">
+        <img src="Logo-PTCD-Đã tách nền (1).png" alt="Logo FPT" class="h-12">
+        <h1 class="text-xl sm:text-2xl font-bold">Trường THPT Của Tôi</h1>
+      </div>
+      <nav class="flex space-x-4 items-center">
+        <a href="testASM.html" class="hover:bg-gray-200 text-white px-3 py-2 rounded">Trang chủ</a>
+        <a href="LIENHE.html" class="hover:bg-gray-200 text-white px-3 py-2 rounded">Liên hệ</a>
+        <a href="GOPY.html" class="bg-white text-orange-600 font-bold px-3 py-2 rounded shadow">Góp ý</a>
+        <a href="HOIDAP.html" class="hover:bg-gray-200 text-white px-3 py-2 rounded">Hỏi & Đáp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Góp ý form -->
+  <main class="container mx-auto max-w-2xl p-6 mt-8 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4 text-orange-600 text-center">Gửi Góp Ý Của Bạn</h2>
+    <form id="feedbackForm">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-semibold mb-1">Họ và Tên</label>
+        <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="Nhập họ và tên của bạn" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-semibold mb-1">Email</label>
+        <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="Nhập email của bạn" required>
+      </div>
+
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 font-semibold mb-1">Nội dung góp ý</label>
+        <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 rounded-md px-4 py-2" placeholder="Viết góp ý của bạn..." required></textarea>
+      </div>
+
+      <!-- Nút gửi đầu -->
+      <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition duration-300">Gửi góp ý</button>
+
+      <!-- Nút gửi phụ phía cuối -->
+      <div class="mt-6 flex justify-center">
+        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded shadow transition duration-300">
+          Gửi góp ý
+        </button>
+      </div>
+    </form>
+
+    <!-- Thông báo -->
+    <div id="successMessage" class="mt-4 text-green-600 font-semibold text-center hidden">
+      🎉 Góp ý đã được gửi thành công!
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="glowing-background text-white text-center py-4 mt-10">
+    &copy; 2025 Trường THPT Của Tôi. All rights reserved.
+  </footer>
+
+  <!-- Script xử lý gửi -->
+  <script>
+    const form = document.getElementById('feedbackForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Ngăn gửi thực
+      successMessage.classList.remove('hidden'); // Hiện thông báo
+      form.reset(); // Reset form
+    });
+  </script>
+
+</body>
+</html>

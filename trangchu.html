@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trang Chủ - Trường THPT Của Tôi</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+  />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- ✅ HEADER bạn đã gửi -->
+  <header class="glowing-background text-white py-4 text-2xl font-bold relative">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="flex items-center space-x-4">
+        <a href="testASM.html">
+          <img src="Logo-PTCD-Đã tách nền (1).png" alt="Logo FPT" class="h-12 cursor-pointer" />
+        </a>
+        <h1 class="text-xl sm:text-2xl font-bold">Trường THPT Của Tôi</h1>
+      </div>
+      <nav class="flex space-x-4 relative items-center">
+        <a href="trangchu.html" class="hover:bg-gray-200 px-4 py-2 rounded">Trang chủ</a>
+        <div class="relative group">
+          <a href="#" class="hover:bg-orange-300 px-4 py-2 rounded inline-block">Giới thiệu</a>
+          <div class="dropdown-content">
+            <a href="SDTC.html">Sơ đồ tổ chức</a>
+            <a href="https://www.facebook.com/fpshcmunderground.ptcdhcm?locale=vi_VN" target="_blank">Fanpage</a>
+          </div>
+        </div>
+        <a href="LIENHE.html" class="hover:bg-gray-200 px-4 py-2 rounded">Liên hệ</a>
+        <a href="GOPY.html" class="hover:bg-gray-200 px-4 py-2 rounded">Góp ý</a>
+        <a href="HOIDAP.html" class="hover:bg-gray-200 px-4 py-2 rounded">Hỏi & Đáp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ Nội dung chính -->
+  <main class="container mx-auto px-4 py-10 space-y-10">
+
+    <!-- Giới thiệu -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Giới thiệu trường</h2>
+      <p>
+        Trường THPT Của Tôi là nơi đào tạo chất lượng, giúp học sinh phát triển toàn diện cả tri thức lẫn kỹ năng sống.
+      </p>
+    </section>
+
+    <!-- Tin tức -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Tin tức - Thông báo</h2>
+      <ul class="list-disc list-inside">
+        <li>Tuyển sinh năm học 2025 - 2026 đã bắt đầu</li>
+        <li>Lịch thi học kỳ 2 - năm học 2024 - 2025</li>
+        <li>Hoạt động ngoại khóa tháng 5</li>
+      </ul>
+    </section>
+
+    <!-- Hình ảnh -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold mb-4">Hình ảnh nổi bật</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="background10.jpg" alt="Hình 1" class="rounded shadow" />
+        <img src="background3.jpg" alt="Hình 2" class="rounded shadow" />
+        <img src="background4.jpg" alt="Hình 3" class="rounded shadow" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ Footer cố định -->
+  <footer class="glowing-background text-white text-center py-4 fixed bottom-0 left-0 w-full z-50">
+    &copy; 2025 Trường THPT Của Tôi. All rights reserved.
+  </footer>
+
+  <!-- ✅ Script dropdown -->
+  <style>
+    .glowing-background {
+      background: linear-gradient(45deg, #ff7e5f, #feb47b, #ff7e5f);
+      background-size: 200% 200%;
+      animation: glowing 5s ease infinite;
+    }
+    @keyframes glowing {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .group:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 153, 0);
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-decoration: underline;
+    }
+  </style>
+
+</body>
+</html>
